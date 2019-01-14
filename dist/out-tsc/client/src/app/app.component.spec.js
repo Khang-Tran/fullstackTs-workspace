@@ -6,12 +6,8 @@ var app_component_1 = require("./app.component");
 describe('AppComponent', function () {
     beforeEach(testing_1.async(function () {
         testing_1.TestBed.configureTestingModule({
-            imports: [
-                testing_2.RouterTestingModule
-            ],
-            declarations: [
-                app_component_1.AppComponent
-            ],
+            imports: [testing_2.RouterTestingModule],
+            declarations: [app_component_1.AppComponent]
         }).compileComponents();
     }));
     it('should create the app', function () {

@@ -10,13 +10,8 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = tslib_1.__decorate([
         core_1.NgModule({
-            declarations: [
-                app_component_1.AppComponent
-            ],
-            imports: [
-                platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule
-            ],
+            declarations: [app_component_1.AppComponent],
+            imports: [platform_browser_1.BrowserModule, app_routing_module_1.AppRoutingModule],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
         })

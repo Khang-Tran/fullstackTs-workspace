@@ -28,7 +28,8 @@ var App = /** @class */ (function () {
             // tslint:disable-next-line
             return console.log("Cannot create Apollo Server " + err.message);
         });
-        typeorm_1.createConnection().then(function () {
+        typeorm_1.createConnection()
+            .then(function () {
             // tslint:disable-next-line
             return console.log('TypeOrm connected.');
         })
