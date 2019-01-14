@@ -10,12 +10,12 @@
   "author": "Kael <piskael03@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint:fix": "tslint --fix packages/**/*.ts --exclude packages/*/node_modules/**/*.{j,t}s --project tsconfig.json",
+    "lint:fix": "tslint --fix --exclude packages/*/node_modules/**/*.{j,t}s --project tsconfig.json",
     "server": "nodemon --exec ts-node ./packages/server/index.ts",
-    "prettier:fix": "prettier --write packages/**/*.ts"
+    "prettier:fix": "prettier --write"
   },
   "lint-staged": {
-    "*.{ts}": [
+    "packages/**/*.ts": [
       "yarn lint:fix",
       "yarn prettier:fix",
       "jest --findRelatedTests",
