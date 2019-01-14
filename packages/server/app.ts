@@ -1,4 +1,4 @@
-import "reflect-metadata";
+import 'reflect-metadata';
 import * as express from 'express';
 import { UserResolver } from './graphql/resolvers/userResolver';
 import { ApolloServer } from 'apollo-server-express';
