@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "fullstackts-workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Khang-Tran/fullstackTs-workspace.git",
+  "author": "Kael <piskael03@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint:fix": "tslint --fix packages/**/*.ts --exclude packages/*/node_modules/**/*.{j,t}s --project tsconfig.json",
+    "server": "nodemon --exec ts-node ./packages/server/index.ts",
+    "prettier:fix": "prettier --write"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "yarn lint:fix",
+      "yarn prettier:fix",
+      "jest --findRelatedTests",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
