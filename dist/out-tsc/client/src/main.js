@@ -8,5 +8,5 @@ if (environment_1.environment.production) {
     core_1.enableProdMode();
 }
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
-    // tslint:disable-next-line
+    // tslint:dis
     .catch(function (err) { return console.error(err); });
