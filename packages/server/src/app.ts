@@ -1,9 +1,9 @@
 import 'reflect-metadata';
 import * as express from 'express';
-import { UserResolver } from './graphql/resolvers/userResolver';
 import { ApolloServer } from 'apollo-server-express';
-import { buildSchema } from 'type-graphql';
 import { createConnection } from 'typeorm';
+import { GraphQL } from './graphql';
+import { GraphQLSchema } from 'graphql';
 
 class App {
 	public app: express.Application;
@@ -24,7 +24,7 @@ class App {
 	}
 
 	private configGraphql = async (): Promise<void> => {
-		const schema = await buildSchema({ resolvers: [UserResolver] });
+		const schema: GraphQLSchema = await new GraphQL().createSchema();
 		this.apolloServer = new ApolloServer({ schema });
 		this.apolloServer.applyMiddleware({ app: this.app });
 	};
