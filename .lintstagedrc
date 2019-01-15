@@ -1,8 +1,8 @@
 {
   "packages/**/*.ts": [
-    "yarn lint:fix",
-    "yarn prettier:fix",
-    "jest --findRelatedTests",
+    "yarn lint-fix",
+    "yarn prettier-fix",
+    "jest -bail --verbose --config jestconfig.json --findRelatedTests",
     "git add"
   ]
 }
