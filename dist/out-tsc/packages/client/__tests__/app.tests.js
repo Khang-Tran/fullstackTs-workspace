@@ -1,6 +1,6 @@
 "use strict";
-describe('app ', function () {
+describe(function () {
     it('should pass', function () {
-        expect(true).toBeTruthy();
+        expect();
     });
 });
