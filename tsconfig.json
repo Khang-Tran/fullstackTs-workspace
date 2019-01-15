@@ -6,7 +6,6 @@
     "strictFunctionTypes": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "outDir": "./dist/out-tsc",
     "sourceMap": false,
     "declaration": false,
     "module": "commonjs",
@@ -23,5 +22,8 @@
       "es2018",
       "dom"
     ]
-  }
+  },
+  "exclude": [
+    "**/*.(spec|test).ts"
+  ]
 }
