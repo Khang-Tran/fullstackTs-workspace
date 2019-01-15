@@ -10,6 +10,7 @@
   "author": "Kael <piskael03@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint-fix": "tslint --fix --exclude packages/*/node_modules/**/*.ts --project tsconfig.json",
     "server": "nodemon --exec ts-node packages/server/src/index.ts --project packages/server/src/tsconfig.app.json",
     "client": "cd packages/client && yarn start",
