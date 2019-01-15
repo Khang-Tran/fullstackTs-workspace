@@ -11,6 +11,20 @@
   "rules": {
     "ordered-imports": false,
     "member-access": false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "rules": {
+      "directive-selector": [
+        true,
+        "attribute",
+        "app",
+        "camelCase"
+      ],
+      "component-selector": [
+        true,
+        "element",
+        "app",
+        "kebab-case"
+      ]
+    }
   }
 }
