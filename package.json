@@ -14,36 +14,7 @@
     "server": "nodemon --exec ts-node packages/server/src/index.ts --project packages/server/src/tsconfig.app.json",
     "client": "cd packages/client && yarn start",
     "prettier:fix": "prettier --write",
-    "test": "jest",
+    "test": "jest --config jestconfig.json",
     "generate-schema": "graphql get-schema"
-  },
-  "lint-staged": {
-    "packages/**/*.ts": [
-      "yarn lint:fix",
-      "yarn prettier:fix",
-      "jest --findRelatedTests",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/setupJest.ts",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/dist/"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "<rootDir>/tsconfig.json"
-      }
-    }
   }
 }

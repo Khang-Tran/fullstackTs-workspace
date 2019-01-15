@@ -1,0 +1,8 @@
+{
+  "packages/**/*.ts": [
+    "yarn lint:fix",
+    "yarn prettier:fix",
+    "jest --findRelatedTests",
+    "git add"
+  ]
+}
