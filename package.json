@@ -17,6 +17,7 @@
     "prettier-fix": "prettier --write",
     "generate-schema": "graphql get-schema",
     "test": "jest --bail --verbose --config=jestconfig.json",
-    "test-watch": "jest -bail --verbose --findRelatedTests=packages/**/*/*.ts --config=jestconfig.json --watch"
+    "test-watch": "jest -bail --verbose --findRelatedTests=packages/**/*/*.ts --config=jestconfig.json --watch",
+    "cypress": "cypress open"
   }
 }

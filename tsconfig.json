@@ -25,6 +25,7 @@
     ]
   },
   "exclude": [
-    "**/*.(spec|test).ts"
+    "**/*.(spec|test).ts",
+    "cypress"
   ]
 }
