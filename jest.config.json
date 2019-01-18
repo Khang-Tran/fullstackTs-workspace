@@ -1,0 +1,6 @@
+{
+  "projects": [
+    "packages/server/jest.config.json",
+    "packages/client/jest.config.json"
+  ]
+}

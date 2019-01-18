@@ -1,0 +1,18 @@
+{
+  "preset": "jest-preset-angular",
+  "rootDir": "../..",
+  "displayName": "client",
+  "setupTestFrameworkScriptFile": "<rootDir>/packages/client/setupJest.ts",
+  "modulePathIgnorePatterns": [
+    "<rootDir>/dist/",
+    "<rootDir>/cypress/"
+  ],
+  "testMatch": [
+    "<rootDir>/packages/client/__tests__/**/*.ts"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "./tsconfig.client.json"
+    }
+  }
+}

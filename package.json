@@ -16,8 +16,9 @@
     "client": "cd packages/client && yarn start",
     "prettier-fix": "prettier --write",
     "generate-schema": "graphql get-schema",
-    "test": "jest --bail --verbose --config=jestconfig.json",
-    "test-watch": "jest -bail --verbose --findRelatedTests=packages/**/*/*.ts --config=jestconfig.json --watch",
+    "test": "jest --bail --verbose --config=jest.config.json",
+    "test-client": "cd packages/client && jest --bail --verbose --config=jest.config.json",
+    "test-server": "cd packages/server && jest --bail --verbose --config=jest.config.json",
     "cypress": "cypress open"
   }
 }
