@@ -1,17 +1,19 @@
 {
   "preset": "ts-jest",
-  "rootDir": "../..",
+  "rootDir": "./",
   "displayName": "server",
   "modulePathIgnorePatterns": [
-    "<rootDir>/dist/",
-    "<rootDir>/cypress/"
+    "../../dist/",
+    "../..<rootDir>/cypress/"
   ],
   "testMatch": [
-    "<rootDir>/packages/server/__tests__/**/*.ts"
+    "<rootDir>/__tests__/**/*.(spec|test).ts"
   ],
+  "setupTestFrameworkScriptFile": "./__tests__/utils/setup.ts",
+  "testEnvironment": "node",
   "globals": {
     "ts-jest": {
-      "tsConfig": "<rootDir>/packages/server/tsconfig.server.json"
+      "tsConfig": "<rootDir>/tsconfig.server.json"
     }
   }
 }

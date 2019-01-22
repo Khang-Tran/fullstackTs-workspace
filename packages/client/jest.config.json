@@ -8,8 +8,9 @@
     "<rootDir>/cypress/"
   ],
   "testMatch": [
-    "<rootDir>/packages/client/__tests__/**/*.ts"
+    "<rootDir>/packages/client/__tests__/**/*.(spec|test).ts"
   ],
+  "testEnvironment": "jsdom",
   "globals": {
     "ts-jest": {
       "tsConfig": "./tsconfig.client.json"

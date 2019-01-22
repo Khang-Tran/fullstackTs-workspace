@@ -2,7 +2,7 @@
   "packages/**/*.ts": [
     "yarn lint-fix",
     "yarn prettier-fix",
-    "jest --bail --verbose --config=jestconfig.json --findRelatedTests",
+    "jest --bail --verbose --config=jest.config.json --findRelatedTests",
     "git add"
   ]
 }
