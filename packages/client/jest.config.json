@@ -1,19 +1,15 @@
 {
-  "preset": "jest-preset-angular",
+  "preset": "ts-jest",
   "rootDir": "../..",
-  "displayName": "client",
-  "setupTestFrameworkScriptFile": "<rootDir>/packages/client/setupJest.ts",
   "modulePathIgnorePatterns": [
     "<rootDir>/dist/",
     "<rootDir>/cypress/"
   ],
   "testMatch": [
-    "<rootDir>/packages/client/__tests__/**/*.(spec|test).ts"
+    "<rootDir>/packages/client/__tests__/**/*.(spec|test).tsx"
   ],
   "testEnvironment": "jsdom",
-  "globals": {
-    "ts-jest": {
-      "tsConfig": "./tsconfig.client.json"
-    }
-  }
+  "snapshotSerializers": [
+    "enzyme-to-json"
+  ]
 }

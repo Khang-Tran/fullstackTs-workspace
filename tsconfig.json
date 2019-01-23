@@ -9,6 +9,7 @@
     "sourceMap": false,
     "declaration": false,
     "module": "commonjs",
+    "jsx": "react",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

@@ -1,7 +1,4 @@
 {
-  "rulesDirectory": [
-    "codelyzer"
-  ],
   "defaultSeverity": "error",
   "extends": [
     "tslint:recommended",
@@ -13,18 +10,6 @@
     "member-access": false,
     "object-literal-sort-keys": false,
     "import-name": false,
-    "directive-selector": [
-        true,
-        "attribute",
-        "app",
-        "camelCase"
-      ],
-    "component-selector": [
-        true,
-        "element",
-        "app",
-        "kebab-case"
-    ],
     "variable-name": false
   }
 }

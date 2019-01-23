@@ -1,9 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc/packages/client/app",
+    "outDir": "../../dist/out-tsc/packages/client",
     "types": [
-      "jest"
+      "jest",
+      "node"
     ]
   }
 }
