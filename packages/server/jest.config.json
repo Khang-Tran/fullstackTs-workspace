@@ -9,7 +9,6 @@
   "testMatch": [
     "<rootDir>/__tests__/**/*.(spec|test).ts"
   ],
-  "setupTestFrameworkScriptFile": "./__tests__/utils/setup.ts",
   "testEnvironment": "node",
   "globals": {
     "ts-jest": {

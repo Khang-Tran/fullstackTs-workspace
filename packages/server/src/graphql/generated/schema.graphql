@@ -1,12 +1,19 @@
 # source: http://localhost:5000/graphql
-# timestamp: Tue Jan 15 2019 13:45:58 GMT-0500 (Eastern Standard Time)
+# timestamp: Tue Jan 22 2019 15:13:29 GMT-0500 (Eastern Standard Time)
 
 type Mutation {
-  register(password: String!, email: String!, lastName: String!, firstName: String!): User!
+  register(input: RegisterInput!): User!
 }
 
 type Query {
   user(email: String!): User!
+}
+
+input RegisterInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  password: String!
 }
 
 type User {
@@ -14,8 +21,5 @@ type User {
   firstName: String!
   lastName: String!
   email: String!
-}
-
-type UserType {
   name: String!
 }

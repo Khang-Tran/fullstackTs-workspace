@@ -1,11 +1,13 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { Field, ID, ObjectType } from 'type-graphql';
+import { Field, ID, ObjectType, Root } from 'type-graphql';
+import { IsEmailExist } from '../graphql/user/register/IsEmailExistConstraint';
+import { IsEmail } from 'class-validator';
 
 @ObjectType()
 @Entity()
 export class User extends BaseEntity {
 	@Field(() => ID)
-	@PrimaryGeneratedColumn()
+	@PrimaryGeneratedColumn('uuid')
 	id: number;
 
 	@Field()
@@ -20,6 +22,13 @@ export class User extends BaseEntity {
 	password: string;
 
 	@Field()
+	@IsEmailExist()
+	@IsEmail()
 	@Column()
 	email: string;
+
+	@Field()
+	name(@Root() parent: User): string {
+		return `${parent.firstName} ${parent.lastName}`;
+	}
 }

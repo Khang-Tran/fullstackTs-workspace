@@ -24,6 +24,7 @@
         "element",
         "app",
         "kebab-case"
-      ]
+    ],
+    "variable-name": false
   }
 }

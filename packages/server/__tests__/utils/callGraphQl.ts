@@ -9,8 +9,11 @@ export interface IOptions {
 	}>;
 }
 
+let schema: GraphQLSchema;
 export const callGraphQL = async ({ source, variableValues }: IOptions) => {
-	const schema: GraphQLSchema = await new GraphQL().createSchema();
+	if (!schema) {
+		schema = await new GraphQL().createSchema();
+	}
 	return graphql({
 		schema,
 		source,
