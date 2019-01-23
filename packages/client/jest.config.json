@@ -1,15 +1,10 @@
 {
   "preset": "ts-jest",
-  "rootDir": "../..",
-  "modulePathIgnorePatterns": [
-    "<rootDir>/dist/",
-    "<rootDir>/cypress/"
-  ],
+  "rootDir": "./",
+  "displayName": "client",
+  "setupTestFrameworkScriptFile": "<rootDir>/src/setupTest.ts",
   "testMatch": [
-    "<rootDir>/packages/client/__tests__/**/*.(spec|test).tsx"
+    "<rootDir>/**/*.(spec|test).(tsx|ts)"
   ],
-  "testEnvironment": "jsdom",
-  "snapshotSerializers": [
-    "enzyme-to-json"
-  ]
+  "testEnvironment": "jsdom"
 }

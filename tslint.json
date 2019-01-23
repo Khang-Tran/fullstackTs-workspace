@@ -1,15 +1,10 @@
 {
-  "defaultSeverity": "error",
-  "extends": [
-    "tslint:recommended",
-    "tslint-config-airbnb",
-    "tslint-config-prettier"
-  ],
-  "rules": {
-    "ordered-imports": false,
-    "member-access": false,
-    "object-literal-sort-keys": false,
-    "import-name": false,
-    "variable-name": false
+  "extends": [],
+  "defaultSeverity": "warning",
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
   }
 }

@@ -2,17 +2,8 @@
   "preset": "ts-jest",
   "rootDir": "./",
   "displayName": "server",
-  "modulePathIgnorePatterns": [
-    "../../dist/",
-    "../..<rootDir>/cypress/"
-  ],
   "testMatch": [
-    "<rootDir>/__tests__/**/*.(spec|test).ts"
+    "<rootDir>/**/*.(spec|test).ts"
   ],
-  "testEnvironment": "node",
-  "globals": {
-    "ts-jest": {
-      "tsConfig": "<rootDir>/tsconfig.server.json"
-    }
-  }
+  "testEnvironment": "node"
 }
